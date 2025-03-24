@@ -41,3 +41,16 @@ function progessiveSum(num1) {
   return arraySum2;
 }
 console.log(progessiveSum(5));
+
+// Q6. Reformat Seconds Into MM:SS Time Notation.
+function calcTime(seconds1){
+  let inputMinutes = Math.floor(seconds1 / 60);
+  let inputSeconds = seconds1 % 60;
+  if (inputMinutes.toString().length === 1) {
+    inputMinutes = `0` + inputMinutes;
+  }
+  return inputMinutes + `:` + inputSeconds;
+}
+console.log(calcTime(70));
+
+// Q7. 
