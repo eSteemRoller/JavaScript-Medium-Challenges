@@ -42,7 +42,7 @@ function progessiveSum(num1) {
 }
 console.log(progessiveSum(5));
 
-// Q6. Reformat Seconds Into MM:SS Time Notation.
+// Q6. Reformat Given Seconds Into MM:SS Time Notation.
 function calcTime(seconds1){
   let inputMinutes = Math.floor(seconds1 / 60);
   let inputSeconds = seconds1 % 60;
@@ -53,4 +53,45 @@ function calcTime(seconds1){
 }
 console.log(calcTime(70));
 
-// Q7. 
+// Q7. Find the Largest Number in an Array
+function getArrayMax(arr4) {
+  let arrayMax1 = arr4[0];
+  for (let i = 1; i < arr4.length; ++i) {
+    if (arr4[i] > arrayMax1) {
+      arrayMax1 = arr4[i];
+    }
+  }
+  return arrayMax1;
+}
+console.log(getArrayMax([-100, -200, -300]));
+
+// Q8. Reverse a Given String
+function reverseGivenString(str1) {
+  let reverseString1 = ``;
+  for (let i = 0; i < str1.length; ++i) { // incrementing For loop
+    reverseString1 = str1[i] + reverseString1;
+  }
+  return reverseString1;
+}
+console.log(reverseGivenString(`abc`));
+
+// Similar function with decrementing For loop
+function reverseGivenString2(str2) {
+  let reverseString2 = ``;
+  for (let i = str2.length - 1; i >= 0; --i) { // decrementing For loop
+    reverseString2 = reverseString2 + str2[i];
+  }
+  return reverseString2;
+}
+console.log(reverseGivenString2(`Jason`));
+
+// Similar function with the string.split, 
+// array .reverse,
+// and array .join properties
+function reverseGivenString3(str3) {
+  return str3.split(``).reverse().join(``);
+}
+console.log(reverseGivenString3(`This is cool`));
+
+
+// Q9. 
