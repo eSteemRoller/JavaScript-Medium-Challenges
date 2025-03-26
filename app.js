@@ -5,17 +5,20 @@ function filterOutFalsy (truthyOrFalsy1, truthyOrFalsy2) {
 }
 console.log(filterOutFalsy(0, 500));
 
+
 // Q2. Return the Length of Any Given Array
 function returnArrLength (arr1) {
   return arr1.length;
 }
 console.log(returnArrLength([1, 2, 3]));
 
+
 // Q3. Get the Last Element in an Array
 function getLastElem(arr2) {
   return arr2[arr2.length - 1];
 }
 console.log(getLastElem([1, 2, 3, 4]));
+
 
 // Q4. Find the Sum of an Array
 function sumOfArray(arr3) {
@@ -31,6 +34,7 @@ function sumOfArray(arr3) {
 }
 console.log(sumOfArray([2, 2, 2, 4]));
 
+
 // Q5. Add preceding integers including given number (<= includes last number)
 function progessiveSum(num1) {
   let arraySum2 = 0;
@@ -41,6 +45,7 @@ function progessiveSum(num1) {
   return arraySum2;
 }
 console.log(progessiveSum(5));
+
 
 // Q6. Reformat Given Seconds Into MM:SS Time Notation.
 function calcTime(seconds1){
@@ -53,6 +58,7 @@ function calcTime(seconds1){
 }
 console.log(calcTime(70));
 
+
 // Q7. Find the Largest Number in an Array
 function getArrayMax(arr4) {
   let arrayMax1 = arr4[0];
@@ -64,6 +70,7 @@ function getArrayMax(arr4) {
   return arrayMax1;
 }
 console.log(getArrayMax([-100, -200, -300]));
+
 
 // Q8. Reverse a Given String
 function reverseGivenString(str1) {
@@ -94,4 +101,50 @@ function reverseGivenString3(str3) {
 console.log(reverseGivenString3(`This is cool`));
 
 
-// Q9. 
+// Q9. Turn Every Element in an Array Into 0
+function convertAllToZeros(arr5) {
+  for (let i = 0; i < arr5.length; ++i) { // Using a For loop
+    arr5[i] = 0;
+  }
+  return arr5;
+}
+console.log(convertAllToZeros([5, 100, 0]));
+
+function convertAllToZeros2(arr6) {
+  return new Array(arr6.length).fill(0); // Using .fill for a new array
+}
+console.log(convertAllToZeros2([12]));
+
+function convertAllToZeros3(arr7) {
+  return arr7.map(elem => 0); // Using .map (don't forget to return when using {})
+}
+console.log(convertAllToZeros3([1, 2, 3, 4, 5]))
+
+
+// Q10. Filter Out All the "Apples"
+function filterAllApples(arr8) {
+  for (let i = 0; i < arr8.length; ++i) { // Using a For loop
+    if (arr8[i] !== `Apple`) {
+      console.log(arr8[i]); // Part 1 of 2
+    }
+  }
+}
+console.log(filterAllApples([`Banana`, `Apple`, `Orange`, `Apple`]));
+
+function filterAllApples2(arr9) {
+  let newArr9 = [];
+  for (let i = 0; i < arr9.length; ++i) {
+    if (arr9[i] !== `Apple`) {
+      newArr9.push(arr9[i]); // Add an element to an array using .push
+    }
+  }
+  return newArr9; // Part 1 & 2 of 2 (Using a For loop and .push)
+}
+console.log(filterAllApples2([`Tomato`, `Orange`, `Banana`, `Apple`]));
+
+function filterAllApples3(arr10) {
+  return arr10.filter(elem => elem !== `Apple`); // Using .filter (don't forget to return when using {})
+}
+console.log(filterAllApples3([`Banana`, `Orange`, `Apple`]));
+
+
