@@ -111,12 +111,13 @@ function convertAllToZeros(arr5) {
 console.log(convertAllToZeros([5, 100, 0]));
 
 function convertAllToZeros2(arr6) {
-  return new Array(arr6.length).fill(0); // Using .fill for a new array
+  return new Array(arr6.length).fill(0); // Using .fill with a 'new Array'
 }
 console.log(convertAllToZeros2([12]));
 
 function convertAllToZeros3(arr7) {
-  return arr7.map(elem => 0); // Using .map (don't forget to return when using {})
+  return arr7.map(elem => 0);
+  // Using .map (don't forget to 'return' when using {} after ())
 }
 console.log(convertAllToZeros3([1, 2, 3, 4, 5]))
 
@@ -143,8 +144,47 @@ function filterAllApples2(arr9) {
 console.log(filterAllApples2([`Tomato`, `Orange`, `Banana`, `Apple`]));
 
 function filterAllApples3(arr10) {
-  return arr10.filter(elem => elem !== `Apple`); // Using .filter (don't forget to return when using {})
+  return arr10.filter(elem => elem !== `Apple`);
+  // Using .filter (don't forget to 'return' when using {} after ())
 }
 console.log(filterAllApples3([`Banana`, `Orange`, `Apple`]));
 
+
+// Q11. Filter Out All the Falsy Values
+function filterAllFalsyValues(arr11) {
+  let newArr11 = [];
+  for (let i = 0; i < arr11.length; ++i) {
+    if (!!arr11[i] === true) {
+      newArr11.push(arr11[i]);
+    }
+  }
+  return newArr11;
+}
+console.log(filterAllFalsyValues(["", [], 0, null, undefined, "0"]));
+
+function filterAllFalsyValues2(arr12) {
+  return arr12.filter(elem => !!elem === true);
+}
+console.log(filterAllFalsyValues2([`Tomato`, `Orange`, `Banana`, false]));
+
+
+// Q12. Truthy to True, Falsy to False
+function trueOrFalse(arr13) {
+  let booleanArr13 = [];
+  for (let i = 0; i < arr13.length; ++i) {
+    if (!!arr13[i] === true) {
+      booleanArr13.push(!!arr13[i]);
+    }
+    else if (!!arr13[i] === false) {
+      booleanArr13.push(!!arr13[i]);
+    }  
+  }
+  return booleanArr13;
+}
+console.log(trueOrFalse([500, 0, `David`, "", []]));
+
+function trueOrFalse2(arr14) {
+  return arr14.map(elem => !!elem);
+}
+console.log(trueOrFalse2([500, 0, `David`, "", []]));
 
